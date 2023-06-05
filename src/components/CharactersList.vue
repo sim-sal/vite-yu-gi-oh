@@ -18,7 +18,11 @@ export default {
 
 <template>
     <section class="container">
-        <SingleCharacter v-for="character in store.charactersList" :details="character" />
+
+        <div class="row">
+            <SingleCharacter v-for="character in store.charactersList" :details="character" class="col-2" />
+        </div>
+
     </section>
 </template>
 

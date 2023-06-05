@@ -17,7 +17,8 @@ export default {
 </template>
 
 <style scoped lang="scss">
-// .card {
-//     width: calc(100% / 5);
-// }
+.card {
+    background-color: rgb(212, 143, 58);
+    border-radius: 0px;
+}
 </style>

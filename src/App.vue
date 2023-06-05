@@ -44,5 +44,6 @@ export default {
 
 main {
   background-color: rgb(212, 143, 58);
+  padding: 100px;
 }
 </style>

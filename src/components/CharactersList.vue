@@ -1,22 +1,18 @@
 <script>
+import SingleCharacter from './SingleCharacter.vue'
+
 export default {
     name: 'CharactersList',
+    components: {
+        SingleCharacter
+    }
 }
 </script>
 
 <template>
     <section class="container">
-        <!-- card character di esempio -->
-        <div class="card text-center">
-            <img src="" alt="card-img">
-            <h4>Nome personaggio</h4>
-            <div>Specie personaggio</div>
-        </div>
+        <SingleCharacter />
     </section>
 </template>
 
-<style>
-.card {
-    width: calc(100% / 5);
-}
-</style>
+<style scoped lang="scss"></style>

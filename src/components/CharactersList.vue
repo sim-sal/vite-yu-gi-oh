@@ -20,7 +20,7 @@ export default {
     <section class="container">
 
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-            <SingleCharacter v-for="character in store.charactersList" :details="character" class="col-md-3 ms-md-auto" />
+            <SingleCharacter v-for="character in store.charactersList" :details="character" class="col-md-4 ms-md-auto" />
         </div>
 
     </section>
@@ -29,5 +29,6 @@ export default {
 <style scoped lang="scss">
 .container {
     background-color: white;
+    padding: 50px;
 }
 </style>

@@ -19,12 +19,15 @@ export default {
     getCharacters() {
       axios.get(store.apiURL)
         .then(res => {
-          store.charactersList = res.data;
+          store.charactersList = res.data.data;
         })
         .catch(err => {
           console.log(err);
         })
     }
+  },
+  created() {
+    this.getCharacters();
   }
 } 
 </script>

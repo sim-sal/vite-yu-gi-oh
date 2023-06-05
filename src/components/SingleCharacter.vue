@@ -1,6 +1,9 @@
 <script>
 export default {
     name: 'SingleCharacter',
+    props: {
+        details: Object
+    }
 }
 </script>
 

@@ -1,4 +1,5 @@
 <script>
+import { store } from '../src/store'
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
 import CharactersList from './components/CharactersList.vue'
@@ -8,7 +9,12 @@ export default {
   components: {
     AppHeader,
     CharactersList
-  }
+  },
+  data() {
+    return {
+      store,
+    }
+  },
 } 
 </script>
 

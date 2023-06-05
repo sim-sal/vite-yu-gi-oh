@@ -22,7 +22,7 @@ export default {
 .card {
     background-color: $bg-color;
     border-radius: 0px;
-    width: 230px;
+    width: 228px;
 
     h4 {
         color: white;

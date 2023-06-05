@@ -1,19 +1,28 @@
 <script>
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
+import CharactersList from './components/CharactersList.vue'
 
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    CharactersList
   }
 } 
 </script>
 
 <template>
   <AppHeader message="Yu-Gi-Oh Api" />
+  <main>
+    <CharactersList />
+  </main>
 </template>
 
 <style lang="scss">
 @use './styles/general.scss';
+
+main {
+  background-color: rgb(212, 143, 58);
+}
 </style>

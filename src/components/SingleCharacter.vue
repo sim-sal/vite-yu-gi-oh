@@ -12,7 +12,7 @@ export default {
     <div class="card text-center">
         <img :src="details.card_images[0].image_url" alt="card-img">
         <h4>{{ details.name }}</h4>
-        <div>{{ details.archetype }}</div>
+        <div v-if="details.archetype">{{ details.archetype }}</div>
     </div>
 </template>
 

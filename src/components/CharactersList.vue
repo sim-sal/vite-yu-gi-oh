@@ -19,7 +19,7 @@ export default {
 <template>
     <section class="container">
 
-        <div id="bar">
+        <div class="row bar">
             <h5><strong>Found {{ store.charactersList.length }} cards</strong></h5>
         </div>
 
@@ -36,7 +36,7 @@ export default {
     background-color: white;
     padding: 50px;
 
-    #bar {
+    .bar {
         height: 60px;
         width: 99%;
         margin: auto;

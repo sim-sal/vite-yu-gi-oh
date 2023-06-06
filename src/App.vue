@@ -3,12 +3,14 @@ import { store } from '../src/store'
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
 import CharactersList from './components/CharactersList.vue'
+import AppLoader from './components/AppLoader.vue'
 
 
 export default {
   components: {
     AppHeader,
-    CharactersList
+    CharactersList,
+    AppLoader
   },
   data() {
     return {
@@ -20,6 +22,7 @@ export default {
       axios.get(store.apiURL)
         .then(res => {
           store.charactersList = res.data.data;
+          store.loading = false;
         })
         .catch(err => {
           console.log(err);
@@ -33,6 +36,7 @@ export default {
 </script>
 
 <template>
+  <AppLoader v-if="store.loading" />
   <AppHeader message="Yu-Gi-Oh Api" />
   <main>
     <CharactersList />

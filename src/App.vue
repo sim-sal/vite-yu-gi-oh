@@ -24,7 +24,7 @@ export default {
 
       let myUrl = store.apiURL;
 
-      if (store.searchText !== "") {
+      if (store.searchArchetypes !== "") {
         myUrl
       }
 
@@ -37,6 +37,10 @@ export default {
           console.log(err);
         })
 
+    },
+
+    getArchetypesName() {
+
       axios.get(store.apiFilteredUrl)
         .then(res => {
           store.archetypeNameList = res.data;
@@ -47,9 +51,12 @@ export default {
         })
 
     }
+
+
   },
   created() {
     this.getCharacters();
+    this.getArchetypesName();
   }
 } 
 </script>

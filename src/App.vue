@@ -21,6 +21,13 @@ export default {
   },
   methods: {
     getCharacters() {
+
+      let myUrl = store.apiURL;
+
+      if (store.searchText !== "") {
+        myUrl
+      }
+
       axios.get(store.apiURL)
         .then(res => {
           store.charactersList = res.data.data;
@@ -29,6 +36,16 @@ export default {
         .catch(err => {
           console.log(err);
         })
+
+      axios.get(store.apiFilteredUrl)
+        .then(res => {
+          store.archetypeNameList = res.data;
+          store.loading = false;
+        })
+        .catch(err => {
+          console.log(err);
+        })
+
     }
   },
   created() {
@@ -41,7 +58,7 @@ export default {
   <AppLoader v-if="store.loading" />
   <AppHeader message="Yu-Gi-Oh Api" />
   <main>
-    <AppSelect />
+    <AppSelect @search="getCharacters" />
     <CharactersList />
   </main>
 </template>
